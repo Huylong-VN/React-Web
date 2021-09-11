@@ -1,4 +1,4 @@
-
+import  {Link} from 'react-router-dom'
 import React,{useEffect, useState} from 'react'
 import postApi from '../Api/PostsClient'
 import { Layout, Row, Col, Button } from 'antd'
@@ -74,23 +74,21 @@ export const Home = () => {
                                 if (index === 0){
                                     return (
                                         <Col key={index} style={styles.post} className="gutter-row" span={24} >
-                                            <a href="https://google.com">
+                                            <Link to={'/Detail?'+value.id}>
                                                 <img width="100%" src={process.env.REACT_APP_API_URL_IMG + value.images[0].path} />
                                                 <h3 style={styles.titleFirst}>{ value.title}</h3>
-                                            </a>
+                                            </Link>
                                         </Col>
                                     )
                                 }
                                 else {
                                     return (
                                         <Col key={index} style={styles.post} className="gutter-row" span={7} >
-                                            <a href="https://google.com">
+                                            <Link to={'/Detail?'+value.id}>
                                                 <img width="100%" height= "140px" src={process.env.REACT_APP_API_URL_IMG + value.images[0].path} />
                                                 <h3 style={styles.title}>{ value.title }</h3>
-                                            </a>
+                                            </Link>
                                         </Col>
-                                        
-                                        
                                     )
                                 } 
                             }):"loading"}
@@ -119,7 +117,6 @@ export const Home = () => {
                             <Col style={styles.regionItem} span={24} >
                                 <a style={styles.regionItemLink}>Hà Nội</a>
                             </Col>
-                            
                         </Row>
                     </Col>
                 </Row>

@@ -30,6 +30,10 @@ const postApi=({
         return await axiosClient.post(url,{params,headers:{
             Authorization:"Bearer "+localStorage.getItem("token")
         }})
-    }
+    },
+    getDetailsAsync:async(params)=>{
+        const url='/posts/detail/'+params;
+        return await axiosClient.get(url)
+    },
 })
 export default postApi

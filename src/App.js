@@ -19,10 +19,10 @@ const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
 function App() {
   return (
     <Router>
-        <AppRoute component={Detail} layout={Client} path="/Detail" />
-        <AppRoute component={Home} layout={Client} path="/Home" />
-        <AppRoute component={Home} layout={Client} path="/" />
-        <AppRoute component={Login} path="/Login" />
+        <AppRoute exact component={Detail} layout={Client} path="/Detail" />
+        <AppRoute exact component={Home} layout={Client} path="/Home" />
+        <AppRoute exact component={Home} layout={Client} path="/" />
+        <AppRoute exact component={Login} path="/Login" />
     </Router>
   );
 }
