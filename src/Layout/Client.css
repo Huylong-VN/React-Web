@@ -1,0 +1,36 @@
+.appHeader {
+    background-color: white !important;
+    color: black;
+}
+.appLogo {
+    font-size: 36px;
+    font-weight: bold;
+}
+.appLoginRight > div {
+    text-align: right;
+}
+.appLoginLink {
+    padding: 10px 40px;
+    text-align: right;
+    color: white;
+    background-color: #158095;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.header{
+    background-color:rgb(199, 41, 41);
+}
+.appName{
+    background-color:white;
+    font-size:2rem;
+    font-weight: 900;
+}
+.appMenuItem{
+    list-style-type: none;
+
+}
+.ant-drawer-title{
+    font-weight: 900;
+    color:rgb(199, 41, 41);
+    font-size: 1.5rem
+}
