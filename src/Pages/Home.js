@@ -11,12 +11,16 @@ export const Home = () => {
         container: {
             maxWidth: "80%",
             marginLeft: "10%"
+        },
+        title:{
+            color: "black",
+            fontSize: "30px",
         }
     })
     console.log(posts)
     return (
         <div style={styles.container}>
-            <h1>Tieeu De</h1>
+            <h1 style={styles.title}>Tieeu De</h1>
             {posts.length!==0?posts.items.map((value, index) =>{
                 return <div key={index}>{value.title}</div>
             }):"loading"}
