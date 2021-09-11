@@ -13,9 +13,21 @@ const userApi=({
             Authorization:"Bearer "+localStorage.getItem("token")
         }})
     },
-    Login:async(params)=>{
+    Register:async(params)=>{
         const url='/users/';
-        return await axiosClient.get(url,{params,headers:{
+        return await axiosClient.post(url,{params,headers:{
+            Authorization:"Bearer "+localStorage.getItem("token")
+        }})
+    },
+    Update:async(params)=>{
+        const url='/users/';
+        return await axiosClient.put(url,{params,headers:{
+            Authorization:"Bearer "+localStorage.getItem("token")
+        }})
+    },
+    Delete:async(params)=>{
+        const url='/users/'+params;
+        return await axiosClient.delete(url,{headers:{
             Authorization:"Bearer "+localStorage.getItem("token")
         }})
     },
