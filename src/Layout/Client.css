@@ -1,0 +1,12 @@
+.header{
+    background-color:rgb(199, 41, 41);
+}
+.appName{
+    background-color:white;
+    font-size:2rem;
+    font-weight: 900;
+}
+.appMenuItem{
+    list-style-type: none;
+
+}
